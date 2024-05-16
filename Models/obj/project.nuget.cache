@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "MTglZ9+qFDDEB9eKTLAXq17wH5UtiHzJa1ZMDhiiZJU8Awcsc5aezHtloJung9bZVxLAOeh0JvgstqTmidqtvA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Benjamin Sinzore\\Documents\\Job_candidate_hub_API\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BenjaminSinzore\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\BenjaminSinzore\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\BenjaminSinzore\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,11 +1,19 @@
+using Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+var dbCon = builder.Configuration.GetSection("ConnectionStrings:SQLServerConn").Value;
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+ParamsModel.DBConnection = dbCon;
 
 var app = builder.Build();
 
