@@ -9,8 +9,7 @@ namespace Job_candidate_hub_API.Routes
         CandidateIService implService = new CandidateService();
         public string AddOrUpdateCandidate(CandidateModel model)
         {
-            return "Candidate added or updated successfully";
-            //return implService.AddOrUpdateCandidate(model);
+            return implService.AddOrUpdateCandidate(model);
         }
     }
 }

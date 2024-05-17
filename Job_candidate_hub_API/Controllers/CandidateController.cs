@@ -75,29 +75,5 @@ namespace Job_candidate_hub_API.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult Get_()
-        {
-            var items = "Hello Benjamin";
-            return Ok(items);
-        }
-
-
-        [HttpGet]
-        public ActionResult<GlobalResponseModel> Get([FromBody] CandidateModel value)
-        {
-
-            var loginResponse = new GlobalResponseModel
-            {
-
-                Status = 200,
-                Message = "Success",
-                Error = null,
-                Data = "Hello Benjamin"
-            };
-            return Ok(loginResponse);
-        }
-
-
     }
 }
