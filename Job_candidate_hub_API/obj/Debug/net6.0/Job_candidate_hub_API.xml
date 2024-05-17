@@ -9,7 +9,7 @@
             CandidateController Class 
             </summary>
         </member>
-        <member name="M:Job_candidate_hub_API.Controllers.CandidateController.#ctor(Microsoft.Extensions.Logging.ILogger{Job_candidate_hub_API.Controllers.CandidateController})">
+        <member name="M:Job_candidate_hub_API.Controllers.CandidateController.#ctor(Microsoft.Extensions.Logging.ILogger{Job_candidate_hub_API.Controllers.CandidateController},Job_candidate_hub_API.Routes.CandidateRoutes)">
             <summary>
             CandidateController Constractor
             </summary>

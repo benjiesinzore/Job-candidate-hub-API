@@ -1,3 +1,5 @@
+using Job_candidate_hub_API.IServices;
+using Job_candidate_hub_API.Routes;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Models;
@@ -21,6 +23,10 @@ var devEmail = builder.Configuration.GetSection("SwaggerDoc:Email").Value;
 var projectUrl = builder.Configuration.GetSection("SwaggerDoc:Url").Value;
 
 builder.Services.AddControllers();
+
+// Register CandidateRoutes service
+builder.Services.AddScoped<CandidateRoutes, CandidateRoutes>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();

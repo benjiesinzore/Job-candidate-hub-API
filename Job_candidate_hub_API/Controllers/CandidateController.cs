@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using Newtonsoft.Json.Linq;
 
 namespace Job_candidate_hub_API.Controllers
 {
@@ -12,16 +13,17 @@ namespace Job_candidate_hub_API.Controllers
     [Route("[controller]/api/")]
     public class CandidateController : Controller
     {
-        private readonly CandidateRoutes candidateRoute = new CandidateRoutes();
+        private readonly CandidateRoutes candidateRoute;
 
         private readonly ILogger<CandidateController> logger;
 
         /// <summary>
         /// CandidateController Constractor
         /// </summary>
-        public CandidateController(ILogger<CandidateController> logger)
+        public CandidateController(ILogger<CandidateController> logger, CandidateRoutes candidateRoute)
         {
             this.logger = logger;
+            this.candidateRoute = candidateRoute;
         }
 
 
@@ -33,18 +35,18 @@ namespace Job_candidate_hub_API.Controllers
         [AllowAnonymous]
         [HttpPut("addupdate")]
         [Produces("application/json")]
-        public ActionResult<string> AddOrUpdateCandidate([FromBody] CandidateModel userModel)
+        public ActionResult<GlobalResponseModel> AddOrUpdateCandidate([FromBody] CandidateModel value)
         {
 
             try
             {
-                var loginResponse = new GlobalResponseModel<string>
+                var loginResponse = new GlobalResponseModel
                 {
 
                     Status = 200,
                     Message = "Success",
                     Error = null,
-                    Data = candidateRoute.AddOrUpdateCandidate(userModel)
+                    Data = candidateRoute.AddOrUpdateCandidate(value)
                 };
 
 
@@ -53,7 +55,7 @@ namespace Job_candidate_hub_API.Controllers
             }
             catch (Exception ex)
             {
-                var loginResponse = new GlobalResponseModel<string>
+                var loginResponse = new GlobalResponseModel
                 {
 
                     Status = 500,
@@ -71,5 +73,31 @@ namespace Job_candidate_hub_API.Controllers
 
 
         }
+
+
+        [HttpGet]
+        public IActionResult Get_()
+        {
+            var items = "Hello Benjamin";
+            return Ok(items);
+        }
+
+
+        [HttpGet]
+        public ActionResult<GlobalResponseModel> Get([FromBody] CandidateModel value)
+        {
+
+            var loginResponse = new GlobalResponseModel
+            {
+
+                Status = 200,
+                Message = "Success",
+                Error = null,
+                Data = "Hello Benjamin"
+            };
+            return Ok(loginResponse);
+        }
+
+
     }
 }
