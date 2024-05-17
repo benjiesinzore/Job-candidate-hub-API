@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Job_candidate_hub_API</name>
+    </assembly>
+    <members>
+        <member name="T:Job_candidate_hub_API.Controllers.CandidateController">
+            <summary>
+            CandidateController Class 
+            </summary>
+        </member>
+        <member name="M:Job_candidate_hub_API.Controllers.CandidateController.#ctor(Microsoft.Extensions.Logging.ILogger{Job_candidate_hub_API.Controllers.CandidateController})">
+            <summary>
+            CandidateController Constractor
+            </summary>
+        </member>
+        <member name="M:Job_candidate_hub_API.Controllers.CandidateController.AddOrUpdateCandidate(Models.CandidateModel)">
+            <summary>
+            This endpoint accespts, FirstName, LastName, Email, Phone, CallTimeInterval, LinkedinUrl, GithubUrl and Comment.
+            If the Candidate already exist the details are updated and returns a message indicating the same, this is also true for when a new candidates profile is added.
+            </summary>
+            <respone code="200">Returns success if the data is added or updated</respone>
+        </member>
+    </members>
+</doc>

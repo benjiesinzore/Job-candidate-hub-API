@@ -1,6 +1,15 @@
-﻿namespace Job_candidate_hub_API.Routes
+﻿using Job_candidate_hub_API.IServices;
+using Job_candidate_hub_API.Services;
+using Models;
+
+namespace Job_candidate_hub_API.Routes
 {
     public class CandidateRoutes
     {
+        CandidateIService implService = new CandidateService();
+        public string AddOrUpdateCandidate(CandidateModel model)
+        {
+            return implService.AddOrUpdateCandidate(model);
+        }
     }
 }

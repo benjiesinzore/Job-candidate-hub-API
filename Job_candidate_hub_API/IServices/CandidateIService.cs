@@ -1,6 +1,9 @@
-﻿namespace Job_candidate_hub_API.IServices
+﻿using Models;
+
+namespace Job_candidate_hub_API.IServices
 {
-    public class CandidateIService
+    public interface CandidateIService
     {
+        public string AddOrUpdateCandidate(CandidateModel model);
     }
 }
