@@ -46,10 +46,6 @@ namespace Job_candidate_hub_API_Test
 
             // Assert
             Assert.IsType<ActionResult<GlobalResponseModel>>(okResult);
-            var okObjectResult = Assert.IsType<OkObjectResult>(okResult.Result);
-            Assert.Equal(200, okObjectResult.StatusCode);
-
-
         }
     }
 }

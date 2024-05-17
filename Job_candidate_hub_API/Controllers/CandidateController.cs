@@ -32,7 +32,6 @@ namespace Job_candidate_hub_API.Controllers
         /// If the Candidate already exist the details are updated and returns a message indicating the same, this is also true for when a new candidates profile is added.
         /// </summary>
         /// <respone code="200">Returns success if the data is added or updated</respone>
-        [AllowAnonymous]
         [HttpPut("addupdate")]
         [Produces("application/json")]
         public ActionResult<GlobalResponseModel> AddOrUpdateCandidate([FromBody] CandidateModel value)
